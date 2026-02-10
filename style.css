@@ -47,36 +47,36 @@ body {
 /* LOGO */
 .navbar {
   position: fixed;
-  top: 25px;
-  left: 25px;
+  top: 30px;
+  left: 30px;
   z-index: 10;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 20px;
 }
 
 .logo img {
   width: 65px;
   border-radius: 50%;
   background: #fff;
-  padding: 4px;
+  padding: 3px;
 }
 
 .logo span {
   font-weight: bold;
-  letter-spacing: 3px;
+  letter-spacing: 4px;
   text-shadow: 0 0 12px #7df9ff;
 }
 
 /* NAV MENU */
 .navbar {
   position: fixed;
-  top: 25px;
-  left: 25px;
-  right: 25px;
+  top: 32px;
+  left: 32px;
+  right: 32px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -85,13 +85,13 @@ body {
 
 .menu {
   display: flex;
-  gap: 30px;
+  gap: 28px;
 }
 
 .menu a {
   text-decoration: none;
   color: #eaf6ff;
-  font-size: 1.05rem;        /* ⬅️ lebih besar dikit */
+  font-size: 1.2rem;        /* ⬅️ lebih besar dikit */
   font-weight: 600;          /* ⬅️ lebih tegas */
   letter-spacing: 2px;       /* ⬅️ karakter modern */
   text-transform: uppercase;/* ⬅️ studio look */
@@ -131,7 +131,7 @@ body {
 
 .hero p {
   margin-top: 15px;
-  font-size: 1.2rem;
+  font-size: 2.2rem;
   color: #cfefff;
 }
 
@@ -143,12 +143,12 @@ body {
 }
 
 .about h2 {
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   color: #7df9ff;
 }
 
 .about p {
-  font-size: 1.3rem;          /* ⬅️ lebih besar */
+  font-size: 1.7rem;          /* ⬅️ lebih besar */
   line-height: 2;             /* ⬅️ lega & elegan */
   letter-spacing: 0.4px;
   color: #d9f3ff;
@@ -164,9 +164,23 @@ body {
   width: 80px;
   height: 3px;
   background: linear-gradient(90deg, #7df9ff, transparent);
-  margin: 18px auto 0;
+  margin: 20px auto 0;
 }
 
+/* BESARIN JUDUL SERVICES & PORTFOLIO */
+.services h2,
+.portfolio h2 {
+  font-size: 34px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .services h2,
+  .portfolio h2 {
+    font-size: 24px;
+  }
+}
 
 /* PORTFOLIO */
 .portfolio {
@@ -183,7 +197,7 @@ body {
   margin: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 35px;
+  gap: 30px;
 }
 
 .portfolio-item {
@@ -249,7 +263,7 @@ body {
 }
 
 .contact h2 {
-  margin-bottom: 25px;
+  margin-bottom: 28px;
   color: #7df9ff;
 }
 
@@ -310,7 +324,7 @@ body {
 }
 
 .service-card p {
-  font-size: 1.05rem;
+  font-size: 1.4rem;
   line-height: 1.8;
   color: #d9f3ff;
 }
@@ -336,53 +350,6 @@ footer {
   opacity: 0.7;
 }
 
-/* ============================= */
-/* RESPONSIVE - MOBILE VIEW     */
-/* ============================= */
-
-@media (max-width: 768px) {
-
-  header {
-    padding: 15px 20px;
-  }
-
-  .menu {
-    gap: 20px;
-  }
-
-  .menu a {
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-  }
-
-  .hero {
-    padding: 120px 20px;
-    text-align: center;
-  }
-
-  .hero h1 {
-    font-size: 2.2rem;
-    line-height: 1.3;
-  }
-
-  section {
-    padding: 90px 20px;
-  }
-
-  .about p {
-    font-size: 1.1rem;
-  }
-
-  .portfolio-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-links {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-}
 
 /* ============================= */
 /* HEADER RESPONSIVE - MOBILE   */
@@ -409,11 +376,19 @@ footer {
   }
 
   .logo span {
-    font-size: 0.85rem;   /* ⬅️ teks mengecil */
-    letter-spacing: 1.5px;
+    font-size: 25px;   /* ⬅️ teks mengecil */
+    font-weight: 500;
+    letter-spacing: 2px;
     text-align: center;
     white-space: normal; /* ⬅️ boleh turun baris */
   }
+
+  @media (max-width: 768px) {
+  .logo span {
+    font-size: 15px;
+    letter-spacing: 1.6px;
+  }
+}
 
   .menu {
     display: flex;
@@ -488,4 +463,30 @@ footer {
   }
 }
 
+/* FORCE BESARIN TEKS LOGO */
+.navbar .logo span {
+  font-size: 25px;
+  letter-spacing: 2px;
+}
+
+/* BESARIN TEKS PROJECT SHOWCASE */
+.portfolio-item span {
+  font-size: 24px;   /* sebelumnya ±16–18 */
+  font-weight: 500;
+}
+
+.portfolio-item p {
+  font-size: 19px;   /* sebelumnya ±14–15 */
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .portfolio-item span {
+    font-size: 17px;
+  }
+
+  .portfolio-item p {
+    font-size: 14.5px;
+  }
+}
 
