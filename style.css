@@ -538,10 +538,26 @@ footer {
 
 /* Section pertama (hero) */
 .hero {
-  padding-top: 160px;   /* sebelumnya biasanya 120–150 */
+  padding-top: 150px;   /* sebelumnya biasanya 120–150 */
 }
 
 /* Heading utama */
 .hero h1 {
   margin-top: 0;
 }
+
+/* ================= MOBILE HERO SPACING FIX ================= */
+@media (max-width: 768px) {
+
+  /* potong jarak navbar → hero */
+  .hero {
+    padding-top: 48px !important;
+  }
+
+  /* pastikan h1 gak nambah jarak */
+  .hero h1 {
+    margin-top: 0 !important;
+  }
+
+}
+
