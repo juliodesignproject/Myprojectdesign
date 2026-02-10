@@ -531,14 +531,9 @@ footer {
 
 /* ================= NAVBAR ↔ HERO SPACING FIX ================= */
 
-/* Navbar jangan kegedean */
-.navbar {
-  padding: 16px 32px;
-}
-
 /* Section pertama (hero) */
 .hero {
-  padding-top: 140px;   /* sebelumnya biasanya 120–150 */
+  padding-top: 130px;   /* sebelumnya biasanya 120–150 */
 }
 
 /* Heading utama */
