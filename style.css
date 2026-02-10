@@ -429,3 +429,52 @@ footer {
 
 }
 
+/* ============================= */
+/* MOBILE TYPOGRAPHY FIX         */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+  .logo img {
+    width: 44px; /* sedikit dibesarkan */
+  }
+
+  .logo span {
+    font-size: 1rem; /* NAIK dari sebelumnya */
+    letter-spacing: 1.5px;
+  }
+
+  .menu a {
+    font-size: 0.9rem;
+  }
+
+  /* HERO SECTION */
+  .hero h1,
+  .home h1 {
+    font-size: 2rem;      /* TURUN dari desktop */
+    line-height: 1.25;
+    text-align: center;
+  }
+
+  .hero p,
+  .home p {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  /* SECTION TITLE */
+  section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+  }
+
+  /* PARAGRAPH */
+  section p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+}
+
