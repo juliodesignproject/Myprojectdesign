@@ -125,7 +125,7 @@ body {
 }
 
 .hero h1 {
-  font-size: 3.8rem;
+  font-size: 3.5rem;
   text-shadow: 0 0 20px rgba(125,249,255,0.9);
 }
 
@@ -222,7 +222,7 @@ body {
 }
 
 .portfolio-item span {
-  padding: 16px;
+  padding: 18px;
   font-weight: bold;
   margin-top: auto;
 }
@@ -457,7 +457,7 @@ footer {
 /* DISABLE STICKY NAVBAR MOBILE */
 /* ============================= */
 
-@media (max-width: 768px) {
+@media (max-width: 668px) {
   .navbar {
     position: relative;   /* ⬅️ MATIIN sticky/fixed */
   }
@@ -491,7 +491,7 @@ footer {
 }
 
 /* ================= MOBILE ALIGN FIX ================= */
-@media (max-width: 768px) {
+@media (max-width: 668px) {
 
   /* NAVBAR */
   .navbar {
@@ -541,17 +541,4 @@ footer {
   margin-top: 0;
 }
 
-/* ================= MOBILE HERO SPACING FIX ================= */
-@media (max-width: 768px) {
-  body {
-    padding-top: 56px !important;
-  }
-}
-
-  /* pastikan h1 gak nambah jarak */
-  .hero h1 {
-    margin-top: 0 !important;
-  }
-
-}
 
