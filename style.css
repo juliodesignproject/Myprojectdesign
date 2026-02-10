@@ -478,3 +478,14 @@ footer {
 
 }
 
+/* ============================= */
+/* DISABLE STICKY NAVBAR MOBILE */
+/* ============================= */
+
+@media (max-width: 768px) {
+  .navbar {
+    position: relative;   /* ⬅️ MATIIN sticky/fixed */
+  }
+}
+
+
