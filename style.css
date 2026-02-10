@@ -655,3 +655,12 @@ body {
     padding-right: 16px;
   }
 }
+
+/* ===== MOBILE HERO OFFSET FIX ===== */
+@media (max-width: 768px) {
+
+  .hero {
+    padding-top: 160px; /* ⬅️ naikin dikit biar H1 aman */
+  }
+
+}
