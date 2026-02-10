@@ -490,3 +490,41 @@ footer {
   }
 }
 
+/* ================= MOBILE ALIGN FIX ================= */
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .logo {
+    text-align: left;
+  }
+
+  .logo span {
+    display: inline-block;
+    text-align: left;
+  }
+
+  /* SECTION TEXT */
+  section {
+    text-align: left;
+  }
+
+  /* SERVICES */
+  .services {
+    text-align: left;
+  }
+
+  /* PORTFOLIO SHOWCASE */
+  .portfolio {
+    text-align: left;
+  }
+
+  .portfolio-item {
+    text-align: left;
+    align-items: flex-start;
+  }
+
+}
