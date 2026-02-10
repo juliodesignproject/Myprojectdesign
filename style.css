@@ -384,3 +384,48 @@ footer {
 
 }
 
+/* ============================= */
+/* HEADER RESPONSIVE - MOBILE   */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: column;   /* ⬅️ turun ke bawah */
+    align-items: center;
+    padding: 14px 16px;
+    gap: 12px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo img {
+    width: 40px;   /* ⬅️ logo mengecil */
+    height: auto;
+  }
+
+  .logo span {
+    font-size: 0.85rem;   /* ⬅️ teks mengecil */
+    letter-spacing: 1.5px;
+    text-align: center;
+    white-space: normal; /* ⬅️ boleh turun baris */
+  }
+
+  .menu {
+    display: flex;
+    flex-wrap: wrap;     /* ⬅️ menu boleh turun */
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .menu a {
+    font-size: 0.8rem;   /* ⬅️ menu kecil di HP */
+    letter-spacing: 1px;
+  }
+
+}
+
