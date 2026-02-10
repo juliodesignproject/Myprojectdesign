@@ -575,3 +575,21 @@ footer {
 
 }
 
+/* ================= FIX NAVBAR NIMPA HERO (MOBILE) ================= */
+
+@media (max-width: 768px) {
+
+  /* navbar tetap fixed */
+  .navbar {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    right: 16px;
+  }
+
+  /* hero WAJIB ngalah ke tinggi navbar */
+  .hero {
+    padding-top: 170px; /* ⬅️ INI KUNCI UTAMA */
+  }
+
+}
