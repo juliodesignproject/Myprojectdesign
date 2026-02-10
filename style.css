@@ -1,0 +1,338 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #eaf6ff;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* BACKGROUND */
+.night {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at top, #2c4760, #0b1623 60%, #050b14);
+  z-index: -2;
+}
+
+/* SHOOTING STARS */
+.shooting-star {
+  position: absolute;
+  width: 180px;
+  height: 2px;
+  background: linear-gradient(-45deg, #7df9ff, transparent);
+  filter: drop-shadow(0 0 10px #7df9ff);
+  animation: shooting 4s linear infinite;
+}
+
+.shooting-star:nth-child(1){top:15%;left:5%}
+.shooting-star:nth-child(2){top:35%;left:25%;animation-delay:1s}
+.shooting-star:nth-child(3){top:55%;left:45%;animation-delay:2s}
+.shooting-star:nth-child(4){top:30%;left:65%;animation-delay:3s}
+.shooting-star:nth-child(5){top:75%;left:20%;animation-delay:4s}
+
+@keyframes shooting {
+  0% {transform: translateX(0); opacity:1}
+  100% {transform: translateX(700px); opacity:0}
+}
+
+/* LOGO */
+.navbar {
+  position: fixed;
+  top: 25px;
+  left: 25px;
+  z-index: 10;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo img {
+  width: 65px;
+  border-radius: 50%;
+  background: #fff;
+  padding: 4px;
+}
+
+.logo span {
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-shadow: 0 0 12px #7df9ff;
+}
+
+/* NAV MENU */
+.navbar {
+  position: fixed;
+  top: 25px;
+  left: 25px;
+  right: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.menu {
+  display: flex;
+  gap: 30px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #eaf6ff;
+  font-size: 1.05rem;        /* ⬅️ lebih besar dikit */
+  font-weight: 600;          /* ⬅️ lebih tegas */
+  letter-spacing: 2px;       /* ⬅️ karakter modern */
+  text-transform: uppercase;/* ⬅️ studio look */
+  position: relative;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #7df9ff;
+}
+
+/* garis halus saat hover */
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #7df9ff;
+  transition: width 0.3s;
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+/* HERO */
+.hero {
+  padding: 160px 20px 90px;
+}
+
+.hero h1 {
+  font-size: 3.8rem;
+  text-shadow: 0 0 20px rgba(125,249,255,0.9);
+}
+
+.hero p {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  color: #cfefff;
+}
+
+/* ABOUT */
+.about {
+  max-width: 800px;
+  margin: 0 auto 90px;
+  padding: 0 20px;
+}
+
+.about h2 {
+  margin-bottom: 20px;
+  color: #7df9ff;
+}
+
+.about p {
+  font-size: 1.3rem;          /* ⬅️ lebih besar */
+  line-height: 2;             /* ⬅️ lega & elegan */
+  letter-spacing: 0.4px;
+  color: #d9f3ff;
+  max-width: 720px;
+  margin: auto;
+}
+
+.about h2::after,
+.services h2::after,
+.portfolio h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #7df9ff, transparent);
+  margin: 18px auto 0;
+}
+
+
+/* PORTFOLIO */
+.portfolio {
+  padding: 70px 20px;
+}
+
+.portfolio h2 {
+  margin-bottom: 40px;
+  color: #ffb7ff;
+}
+
+.portfolio-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 35px;
+}
+
+.portfolio-item {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(0,255,255,0.25);
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-10px);
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+.portfolio-item span {
+  padding: 16px;
+  font-weight: bold;
+  margin-top: auto;
+}
+
+/* LIGHTBOX */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+
+.lightbox:target {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+}
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 40px;
+  color: white;
+  text-decoration: none;
+}
+
+/* CONTACT */
+.contact {
+  padding: 70px 20px 90px;
+}
+
+.contact h2 {
+  margin-bottom: 25px;
+  color: #7df9ff;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 14px 0;
+}
+
+.contact-item img {
+  width: 32px;
+  height: 32px;
+  background: white;
+  padding: 5px;
+  border-radius: 50%;
+  box-shadow: 0 0 14px currentColor;
+}
+
+.contact-item.ig { color: #ff4fd8; }
+.contact-item.wa { color: #00ffb4; }
+
+/* SERVICES */
+.services {
+  padding: 80px 20px;
+}
+
+.services h2 {
+  margin-bottom: 50px;
+  color: #7df9ff;
+}
+
+.service-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 35px;
+}
+
+.service-card {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 0 0 25px rgba(0,255,255,0.25);
+  transition: transform 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+}
+
+.service-card h3 {
+  margin-bottom: 15px;
+  color: #ffb7ff;
+}
+
+.service-card p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #d9f3ff;
+}
+
+section,
+footer {
+  scroll-margin-top: 100px; /* sesuaikan tinggi header */
+}
+
+:target {
+  scroll-margin-top: 100px;
+}
+
+.contact-links a {
+  margin: 0 15px;
+  font-size: 1.1rem;
+  letter-spacing: 1.5px;
+  color: #7df9ff;
+  text-decoration: none;
+}
+
+.contact-links a:hover {
+  opacity: 0.7;
+}
+
