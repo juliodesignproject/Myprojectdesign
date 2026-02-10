@@ -589,7 +589,7 @@ footer {
 
   /* hero WAJIB ngalah ke tinggi navbar */
   .hero {
-    padding-top: 170px; /* ⬅️ INI KUNCI UTAMA */
+    padding-top: 110px; /* ⬅️ INI KUNCI UTAMA */
   }
 
 }
@@ -607,5 +607,51 @@ footer {
   .navbar {
     padding: 10px 14px;
     border-radius: 12px;
+  }
+}
+
+/* ===== LIGHT GLASS NAVBAR (SOFT) ===== */
+.navbar {
+  background: rgba(15, 25, 40, 0.6);   /* ⬅️ lebih terang & soft */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== FIX TOP GAP ===== */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 32px);
+  max-width: 1200px;
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 90px;
+  }
+}
+
+/* ===== NAVBAR ALIGN FIX ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
