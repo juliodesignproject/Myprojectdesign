@@ -411,8 +411,8 @@ footer {
   }
 
   .logo span {
-    font-size: 1rem; /* NAIK dari sebelumnya */
-    letter-spacing: 1.5px;
+    font-size: 0.8rem; /* NAIK dari sebelumnya */
+    letter-spacing: 1.2px;
   }
 
   .menu a {
@@ -422,7 +422,7 @@ footer {
   /* HERO SECTION */
   .hero h1,
   .home h1 {
-    font-size: 2rem;      /* TURUN dari desktop */
+    font-size: 1.5rem;      /* TURUN dari desktop */
     line-height: 1.25;
     text-align: center;
   }
@@ -518,7 +518,7 @@ footer {
 
 /* Section pertama (hero) */
 .hero {
-  padding-top: 130px;   /* sebelumnya biasanya 120–150 */
+  padding-top: 160px;   /* sebelumnya biasanya 120–150 */
 }
 
 /* Heading utama */
