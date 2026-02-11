@@ -140,25 +140,80 @@ body {
 /* HERO SECTION                  */
 /* ============================= */
 .hero {
-  padding: 180px 20px 80px;
-  min-height: 60vh;
+  padding: 130px 20px 60px;
+  min-height: 65vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+
+/* Decorative Lines */
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #7df9ff, transparent);
+  animation: lineGlow 3s ease-in-out infinite;
+}
+
+.hero::before {
+  top: 100px;
+  width: 200px;
+}
+
+.hero::after {
+  bottom: 40px;
+  width: 150px;
+  animation-delay: 1.5s;
+}
+
+@keyframes lineGlow {
+  0%, 100% { opacity: 0.3; width: 150px; }
+  50% { opacity: 1; width: 250px; }
 }
 
 .hero h1 {
   font-size: 2.8rem;
   text-shadow: 0 0 20px rgba(125, 249, 255, 0.9);
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   line-height: 1.2;
+  animation: fadeInUp 1s ease-out, gentleFloat 6s ease-in-out 2s infinite;
+}
+
+@keyframes gentleFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 .hero p {
   font-size: 1.3rem;
   color: #cfefff;
   margin-top: 10px;
+  animation: fadeInUp 1.2s ease-out;
+  animation-delay: 0.3s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+/* Fade In Up Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ============================= */
@@ -167,7 +222,8 @@ body {
 .about {
   max-width: 900px;
   margin: 0 auto 80px;
-  padding: 60px 20px;
+  padding: 40px 20px;
+  animation: fadeIn 1s ease-out;
 }
 
 .about h2 {
@@ -175,6 +231,7 @@ body {
   margin-bottom: 30px;
   color: #7df9ff;
   position: relative;
+  animation: fadeInUp 0.8s ease-out;
 }
 
 .about h2::after {
@@ -184,6 +241,12 @@ body {
   height: 3px;
   background: linear-gradient(90deg, #7df9ff, transparent);
   margin: 15px auto 0;
+  animation: expandWidth 1s ease-out 0.5s backwards;
+}
+
+@keyframes expandWidth {
+  from { width: 0; }
+  to { width: 80px; }
 }
 
 .about p {
@@ -191,6 +254,63 @@ body {
   line-height: 1.8;
   letter-spacing: 0.5px;
   color: #d9f3ff;
+  animation: fadeInUp 1s ease-out 0.3s backwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Hero Decorative Circles */
+.hero-decoration {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(125, 249, 255, 0.15), transparent);
+  border: 1px solid rgba(125, 249, 255, 0.2);
+  animation: float 8s ease-in-out infinite;
+}
+
+.circle-1 {
+  width: 120px;
+  height: 120px;
+  top: 15%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.circle-2 {
+  width: 80px;
+  height: 80px;
+  top: 60%;
+  right: 15%;
+  animation-delay: 2s;
+}
+
+.circle-3 {
+  width: 100px;
+  height: 100px;
+  bottom: 20%;
+  left: 20%;
+  animation-delay: 4s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-20px) scale(1.1);
+    opacity: 0.6;
+  }
 }
 
 /* ============================= */
@@ -477,8 +597,18 @@ footer {
   
   /* HERO */
   .hero {
-    padding: 140px 15px 60px;
+    padding: 110px 15px 50px;
     min-height: 50vh;
+  }
+  
+  .hero::before {
+    top: 80px;
+    width: 150px;
+  }
+  
+  .hero::after {
+    bottom: 30px;
+    width: 100px;
   }
   
   .hero h1 {
@@ -488,6 +618,22 @@ footer {
   
   .hero p {
     font-size: 0.9rem;
+  }
+  
+  /* Smaller circles on mobile */
+  .circle-1 {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .circle-2 {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .circle-3 {
+    width: 70px;
+    height: 70px;
   }
   
   /* ABOUT */
@@ -638,11 +784,16 @@ footer {
 /* Landscape Mobile */
 @media (max-width: 768px) and (orientation: landscape) {
   .hero {
-    padding: 120px 15px 40px;
+    padding: 100px 15px 40px;
     min-height: auto;
   }
   
   .navbar {
     padding: 8px 15px;
+  }
+  
+  .hero::before,
+  .hero::after {
+    display: none;
   }
 }
