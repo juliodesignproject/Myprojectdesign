@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Julio Design Project</title>
-  <link rel="stylesheet" href="style.css?v=12">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -17,7 +17,7 @@
   <span class="shooting-star"></span>
 </div>
 
-<!-- LOGO -->
+<!-- NAVBAR -->
 <header class="navbar">
   <div class="logo">
     <img src="jdp.png.png" alt="Julio Design Project">
@@ -37,11 +37,10 @@
   <h1>Mewujudkan Ruang yang Berkarakter</h1> 
   <p>Modern • Minimalist • Futuristic Interior Design</p>
 </section>
-<br><br><br><br>
 
 <!-- ABOUT -->
 <section class="about" id="about">
-  <h2 style="font-size:30px; ">Tentang Studio</h2> 
+  <h2>Tentang Studio</h2> 
   <p>
     Julio Design Project adalah studio interior design yang berfokus pada
     konsep modern, minimalis, dan futuristik dengan visual elegan
@@ -49,13 +48,14 @@
   </p>
 </section>
 
+<!-- SERVICES -->
 <section class="services">
-  <h2 style="font-size:30px; ">Design Services</h2>
+  <h2>Design Services</h2>
 
   <div class="service-grid">
 
     <div class="service-card">
-      <h3 style="font-size:25px; ">Concept Design</h3>
+      <h3>Concept Design</h3>
       <p>
         Konsultasi konsep interior, moodboard, layout dasar,
         dan arahan desain sesuai kebutuhan klien.
@@ -63,7 +63,7 @@
     </div>
 
     <div class="service-card">
-      <h3 style="font-size:25px; ">3D Design & Visualization</h3>
+      <h3>3D Design & Visualization</h3>
       <p>
         Layout detail, 3D modeling, render realistis,
         dan revisi desain untuk visual yang presisi.
@@ -71,7 +71,7 @@
     </div>
 
     <div class="service-card">
-      <h3 style="font-size:25px; ">Design & Build</h3>
+      <h3>Design & Build</h3>
       <p>
         Layanan lengkap dari konsep, desain,
         hingga pendampingan pelaksanaan proyek.
@@ -83,73 +83,84 @@
 
 <!-- PORTFOLIO -->
 <section class="portfolio" id="projects">
-  <h2 style="font-size:30px; ">Design Project Showcase</h2>
+  <h2>Design Project Showcase</h2>
   <div class="portfolio-grid">
 
-    <!-- ITEM -->
     <div class="portfolio-item">
-      <a href="#img1"><img src="project2.jpg.jpg"></a>
-      <span>Selera Lobby & Reception</span>
-      <p>Elegant hotel lobby design feauturing warm wood tones and sophisticated lighting</p>
+      <a href="#img1"><img src="project2.jpg.jpg" alt="Selera Lobby"></a>
+      <div class="portfolio-content">
+        <span>Selera Lobby & Reception</span>
+        <p>Elegant hotel lobby design featuring warm wood tones and sophisticated lighting</p>
+      </div>
     </div>
 
     <div class="portfolio-item">
-      <a href="#img2"><img src="project3.jpg.jpg"></a>
-      <span>Uptown Serviced Office</span>
-      <p>Contemporary office space with glass partitions and modern minimalist asthetic design</p>
+      <a href="#img2"><img src="project3.jpg.jpg" alt="Uptown Office"></a>
+      <div class="portfolio-content">
+        <span>Uptown Serviced Office</span>
+        <p>Contemporary office space with glass partitions and modern minimalist aesthetic design</p>
+      </div>
     </div>
 
     <div class="portfolio-item">
-      <a href="#img3"><img src="project1.jpg.jpg"></a>
-      <span>Warm Modern Bedroom</span>
-      <p>A thoughfully designed bedroom that emphasizes warmth and comfort through modern interior elements</p>
+      <a href="#img3"><img src="project1.jpg.jpg" alt="Modern Bedroom"></a>
+      <div class="portfolio-content">
+        <span>Warm Modern Bedroom</span>
+        <p>A thoughtfully designed bedroom that emphasizes warmth and comfort through modern interior elements</p>
+      </div>
     </div>
 
     <div class="portfolio-item">
-      <a href="#img4"><img src="project6.jpg.jpg"></a>
-      <span>Contemporary Living Room</span>
-      <p>A modern living space designed with a balance of functionality and aesthetics, featuring natural light, neutral colors, and a sleek layout.</p>
+      <a href="#img4"><img src="project6.jpg.jpg" alt="Living Room"></a>
+      <div class="portfolio-content">
+        <span>Contemporary Living Room</span>
+        <p>A modern living space designed with a balance of functionality and aesthetics, featuring natural light, neutral colors, and a sleek layout.</p>
+      </div>
     </div>
 
     <div class="portfolio-item">
-      <a href="#img5"><img src="project5.jpg.jpg"></a>
-      <span>Modern Luxury Kitchen</span>
-      <p>A clean and functional kitchen design with modern finishes, optimized storage and a minimalist luxury touch for everyday comfort.</p>
+      <a href="#img5"><img src="project5.jpg.jpg" alt="Luxury Kitchen"></a>
+      <div class="portfolio-content">
+        <span>Modern Luxury Kitchen</span>
+        <p>A clean and functional kitchen design with modern finishes, optimized storage and a minimalist luxury touch for everyday comfort.</p>
+      </div>
     </div>
 
     <div class="portfolio-item">
-      <a href="#img6"><img src="project4.jpg.jpg"></a>
-      <span>Pixy Exhibition Booth</span>
-      <p>A modern, sleek , immersive beauty space design to captivate inspire and explore the pixy concept to minimalism meets sophistication</p>
+      <a href="#img6"><img src="project4.jpg.jpg" alt="Exhibition Booth"></a>
+      <div class="portfolio-content">
+        <span>Pixy Exhibition Booth</span>
+        <p>A modern, sleek, immersive beauty space design to captivate inspire and explore the pixy concept to minimalism meets sophistication</p>
+      </div>
     </div>
 
   </div>
 </section>
 
 <!-- LIGHTBOX -->
-<div id="img1" class="lightbox"><a href="#" class="close">&times;</a><img src="project2.jpg.jpg"></div>
-<div id="img2" class="lightbox"><a href="#" class="close">&times;</a><img src="project3.jpg.jpg"></div>
-<div id="img3" class="lightbox"><a href="#" class="close">&times;</a><img src="project1.jpg.jpg"></div>
-<div id="img4" class="lightbox"><a href="#" class="close">&times;</a><img src="project6.jpg.jpg"></div>
-<div id="img5" class="lightbox"><a href="#" class="close">&times;</a><img src="project5.jpg.jpg"></div>
-<div id="img6" class="lightbox"><a href="#" class="close">&times;</a><img src="project4.jpg.jpg"></div>
+<div id="img1" class="lightbox"><a href="#" class="close">&times;</a><img src="project2.jpg.jpg" alt="Selera Lobby"></div>
+<div id="img2" class="lightbox"><a href="#" class="close">&times;</a><img src="project3.jpg.jpg" alt="Uptown Office"></div>
+<div id="img3" class="lightbox"><a href="#" class="close">&times;</a><img src="project1.jpg.jpg" alt="Modern Bedroom"></div>
+<div id="img4" class="lightbox"><a href="#" class="close">&times;</a><img src="project6.jpg.jpg" alt="Living Room"></div>
+<div id="img5" class="lightbox"><a href="#" class="close">&times;</a><img src="project5.jpg.jpg" alt="Luxury Kitchen"></div>
+<div id="img6" class="lightbox"><a href="#" class="close">&times;</a><img src="project4.jpg.jpg" alt="Exhibition Booth"></div>
 
 <!-- CONTACT -->
 <footer class="contact" id="contact">
-  <h2 style="font-size:26px; ">Contact Me</h2>
-  <p>Let’s work together & Click here</p>
+  <h2>Contact Me</h2>
+  <p>Let's work together & Click here</p>
 
   <div class="contact-links">
-  <div class="contact-item ig">
-    <img src="IG.png">
-    <a href="https://instagram.com/juliodesignproject" target="_blank">@juliodesignproject</a>
-  </div>
-  <div class="contact-item wa">
-   <img src="WA.png">
-   <a href="https://wa.me/6287824975606" target="_blank">087824975606</a>
+    <div class="contact-item ig">
+      <img src="IG.png" alt="Instagram">
+      <a href="https://instagram.com/juliodesignproject" target="_blank">@juliodesignproject</a>
+    </div>
+    <div class="contact-item wa">
+      <img src="WA.png" alt="WhatsApp">
+      <a href="https://wa.me/6287824975606" target="_blank">087824975606</a>
+    </div>
   </div>
 </footer>
-
 
 </body>
 </html>
