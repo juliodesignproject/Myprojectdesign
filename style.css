@@ -91,7 +91,7 @@ body {
 .menu a {
   text-decoration: none;
   color: #eaf6ff;
-  font-size: 1.2rem;        /* ⬅️ lebih besar dikit */
+  font-size: 1.1rem;        /* ⬅️ lebih besar dikit */
   font-weight: 600;          /* ⬅️ lebih tegas */
   letter-spacing: 2px;       /* ⬅️ karakter modern */
   text-transform: uppercase;/* ⬅️ studio look */
@@ -120,13 +120,13 @@ body {
 }
 
 .hero h1 {
-  font-size: 3.5rem;
+  font-size: 3.2rem;
   text-shadow: 0 0 20px rgba(125,249,255,0.9);
 }
 
 .hero p {
   margin-top: 15px;
-  font-size: 2.2rem;
+  font-size: 2.1rem;
   color: #cfefff;
 }
 
@@ -145,7 +145,7 @@ body {
 .about p {
   font-size: 1.7rem;          /* ⬅️ lebih besar */
   line-height: 2;             /* ⬅️ lega & elegan */
-  letter-spacing: 0.4px;
+  letter-spacing: 0.8px;
   color: #d9f3ff;
   max-width: 720px;
   margin: auto;
@@ -167,7 +167,7 @@ body {
 .portfolio h2 {
   font-size: 34px;
   font-weight: 600;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.px;
 }
 
 @media (max-width: 768px) {
@@ -370,14 +370,6 @@ footer {
     height: auto;
   }
 
-  .logo span {
-    font-size: 25px;   /* ⬅️ teks mengecil */
-    font-weight: 440;
-    letter-spacing: 2px;
-    text-align: center;
-    white-space: normal; /* ⬅️ boleh turun baris */
-  }
-
   @media (max-width: 768px) {
   .logo span {
     font-size: 15px;
@@ -438,12 +430,14 @@ footer {
   section h2 {
     font-size: 1.5rem;
     margin-bottom: 12px;
+    text-align: center;
   }
 
   /* PARAGRAPH */
   section p {
     font-size: 0.95rem;
     line-height: 1.7;
+    text-align: center;
   }
 
 }
@@ -526,55 +520,6 @@ footer {
   margin-top: 0;
 }
 
-/* ========================= */
-/* NAVBAR FINAL (STABIL)     */
-/* ========================= */
-
-.navbar {
-  position: fixed;
-  top: 24px;
-  left: 24px;
-  right: 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 10;
-}
-
-/* ========================= */
-/* HERO FINAL (DESKTOP)      */
-/* ========================= */
-
-.hero {
-  padding-top: 120px;   /* jarak aman dari navbar */
-  padding-bottom: 90px;
-}
-
-.hero h1 {
-  margin-top: 0;
-}
-
-/* ========================= */
-/* HERO + NAVBAR MOBILE ONLY */
-/* ========================= */
-
-@media (max-width: 768px) {
-
-  .navbar {
-    top: 16px;
-    left: 16px;
-    right: 16px;
-    padding: 0;
-    flex-direction: row;   /* ⬅️ JANGAN column */
-  }
-
-  .hero {
-    padding-top: 72px;   /* ⬅️ INI KUNCI */
-    padding-bottom: 70px;
-  }
-
-}
-
 /* ================= FIX NAVBAR NIMPA HERO (MOBILE) ================= */
 
 @media (max-width: 768px) {
@@ -618,12 +563,6 @@ footer {
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
 }
 
-/* ===== FIX TOP GAP ===== */
-body {
-  margin: 0;
-  padding: 0;
-}
-
 .navbar {
   position: fixed;
   top: 0;
@@ -656,11 +595,155 @@ body {
   }
 }
 
-/* ===== MOBILE HERO OFFSET FIX ===== */
+}
+/* ===== MOBILE NAVBAR REFINED ===== */
 @media (max-width: 768px) {
 
-  .hero {
-    padding-top: 160px; /* ⬅️ naikin dikit biar H1 aman */
+  .navbar {
+    padding: 8px 14px;
+    border-radius: 10px;
+  }
+
+  .logo {
+    font-size: 14px;       /* sebelumnya kebesaran */
+    letter-spacing: 0.5px;
+  }
+
+  .menu a {
+    font-size: 13px;
   }
 
 }
+@media (max-width: 768px) {
+
+  .navbar {
+    background: linear-gradient(
+      180deg,
+      rgba(20, 30, 45, 0.65),
+      rgba(20, 30, 45, 0.45)
+    );
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
+  }
+
+/* ================= NAVBAR FINAL CLEAN ================= */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 20px;
+  right: 20px;
+  z-index: 24;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 10px 18px;
+  border-radius: 12px;
+
+  background: linear-gradient(
+    180deg,
+    rgba(20, 30, 45, 0.6),
+    rgba(20, 30, 45, 0.4)
+  );
+
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+@media (max-width: 768px) {
+
+  .logo img {
+    width: 38px;
+  }
+
+  .logo span {
+    font-size: 14px;
+    letter-spacing: 1.2px;
+  }
+
+  .menu a {
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
+}
+
+/* ===== FIX JARAK TENTANG STUDIO (DI DALAM HERO) ===== */
+
+.hero h2 {
+  margin-top: 40px;
+  margin-bottom: 24px;
+}
+
+.hero h2 + p {
+  margin-top: 0;
+  line-height: 1.8;
+}
+
+/* HP */
+@media (max-width: 768px) {
+  .hero h2 {
+    margin-top: 24px;
+    margin-bottom: 16px;
+  }
+}
+
+/* ================= FINAL CLEAN OVERRIDE ================= */
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 12px;
+  left: 16px;
+  right: 16px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 10px 18px;
+  border-radius: 14px;
+
+  background: linear-gradient(
+    180deg,
+    rgba(20, 30, 45, 0.6),
+    rgba(20, 30, 45, 0.45)
+  );
+
+  backdrop-filter: blur(14px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  z-index: 999;
+}
+
+/* HERO */
+.hero {
+  padding-top: 150px;
+}
+
+/* TENTANG STUDIO (DI HERO) */
+.hero h2 {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.hero h2 + p {
+  margin-top: 0;
+  line-height: 1.8;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 110px;
+  }
+
+  .hero h2 {
+    margin-top: 28px;
+    margin-bottom: 14px;
+  }
+}
+
